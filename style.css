@@ -1,0 +1,362 @@
+/* PartyRent By Jan — CSS */
+
+:root {
+  --bg: #ffffff;
+  --text: #2b2b2b;
+  --muted: #6b6b6b;
+  --brown: #5c4033; 
+  --gold: #d4af37; 
+  --gold-dark: #b38f1c;
+  --surface: #faf8f6;
+  --border: #e7e1db;
+  --radius: 12px;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* Reset & base */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+/* Header / nav */
+.site-header {
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  z-index: 10;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+}
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  color: #fff;
+  font-weight: 800;
+}
+.brand-name {
+  color: var(--brown);
+  letter-spacing: 0.2px;
+}
+
+.site-nav {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+}
+.site-nav a {
+  padding: 8px 10px;
+  border-radius: 8px;
+  color: var(--text);
+}
+.site-nav a[aria-current="page"] {
+  color: var(--brown);
+  border-bottom: 2px solid var(--gold);
+}
+
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--border);
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+/* Hero */
+.hero {
+  background: radial-gradient(
+      80% 80% at 20% 10%,
+      rgba(212, 175, 55, 0.09),
+      transparent
+    ),
+    radial-gradient(60% 60% at 80% 0%, rgba(92, 64, 51, 0.06), transparent);
+}
+.hero-inner {
+  padding: 0 0 64px; /* eliminat spatiul de sus, pastrat jos */
+  text-align: center;
+}
+.hero h1 {
+  font-size: clamp(28px, 5vw, 42px);
+  margin: 0 0 10px;
+  color: var(--brown);
+}
+.hero p {
+  color: var(--muted);
+  max-width: 720px;
+  margin: 0 auto 24px;
+}
+.hero-ctas {
+  display: inline-flex;
+  gap: 12px;
+}
+
+/* Hero logo image */
+.hero-logo {
+  width: 80vw; /* 80% din latimea ferestrei */
+  max-width: 1200px; /* limiteaza pe ecrane foarte late */
+  height: 500px;
+  margin: 0 auto 18px;
+  filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.08));
+}
+
+/* Sections */
+.section {
+  padding: 56px 0;
+}
+.section.alt {
+  background: var(--surface);
+}
+.section h2 {
+  margin: 0 0 16px;
+  color: var(--brown);
+}
+.section-cta {
+  margin-top: 16px;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  gap: 16px;
+}
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Cards */
+.card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+.feature {
+  border-top: 3px solid var(--gold);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  transition: transform 0.06s ease, background 0.2s ease;
+}
+.btn:active {
+  transform: translateY(1px);
+}
+.btn-primary {
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  color: #fff;
+  border: none;
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--brown);
+  border: 1px solid var(--border);
+}
+
+/* Gallery */
+.gallery-grid {
+  --size: 120px;
+}
+.gallery-item {
+  aspect-ratio: 4/3;
+  border-radius: 10px;
+  background: #eee;
+  display: grid;
+  place-items: center;
+  color: #999;
+  border: 1px dashed #ccc;
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+/* Prices */
+.price-card {
+  position: relative;
+  padding-top: 22px;
+}
+.price-card.featured {
+  border-color: var(--gold);
+  box-shadow: 0 10px 32px rgba(212, 175, 55, 0.2);
+}
+.price-card .tag {
+  position: absolute;
+  top: -10px;
+  right: 16px;
+  background: var(--gold);
+  color: #fff;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+.price-items {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 12px;
+}
+.price-items li {
+  padding: 6px 0;
+  border-bottom: 1px dashed var(--border);
+}
+.price-note {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.info-box {
+  background: #fff8e1;
+  border: 1px solid #ffe4a3;
+  color: #7a5a00;
+  padding: 12px 14px;
+  border-radius: 10px;
+}
+
+/* Quotes */
+.quote p {
+  font-size: 18px;
+}
+.quote .author {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Contact */
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 10px 0 16px;
+}
+.contact-card {
+  display: block;
+}
+.form h2 {
+  margin-top: 0;
+}
+.form .form-row {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+.form input,
+.form textarea {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font: inherit;
+}
+.form-actions {
+  display: flex;
+  gap: 10px;
+}
+.small {
+  font-size: 12px;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--border);
+  margin-top: 40px;
+}
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0;
+}
+.footer-bottom {
+  padding: 12px 0 24px;
+  color: var(--muted);
+}
+
+/* Helpers */
+.muted {
+  color: var(--muted);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .grid-3 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+  .nav-toggle {
+    display: inline-block;
+  }
+  .site-nav {
+    position: absolute;
+    top: 58px;
+    right: 4%;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    width: 200px;
+    box-shadow: var(--shadow);
+  }
+  .site-nav.open {
+    display: flex;
+  }
+}

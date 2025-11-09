@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact — PartyRent By Jan</title>
+    <meta name="description" content="Contactează PartyRent By Jan pentru oferte personalizate de închiriere mese, scaune și accesorii decorative. București și județele învecinate." />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="contact">
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">PRJ</span>
+          <span class="brand-name">PartyRent By Jan</span>
+        </a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Meniu</button>
+        <nav id="site-nav" class="site-nav" aria-label="Navigare principală">
+          <a href="index.html">Acasă</a>
+          <a href="preturi.html">Prețuri</a>
+          <a href="contact.html" aria-current="page">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <h1>Contact</h1>
+          <div class="grid grid-2 contact-grid">
+            <div>
+              <p>Răspundem rapid pe telefon și WhatsApp. Pentru ofertă personalizată, trimite formularul cu detaliile evenimentului.</p>
+
+              <div class="contact-cards">
+                <a class="card contact-card" href="#" id="tel-link" data-placeholder="true">
+                  <h3>Telefon</h3>
+                  <p>+40 7xx xxx xxx</p>
+                </a>
+                <a class="card contact-card" href="#" id="wa-link" data-placeholder="true">
+                  <h3>WhatsApp</h3>
+                  <p>Chat direct</p>
+                </a>
+                <a class="card contact-card" href="mailto:contact@partyrentbyjan.ro" id="mail-link" data-placeholder="true">
+                  <h3>Email</h3>
+                  <p>contact@partyrentbyjan.ro</p>
+                </a>
+              </div>
+
+              <div class="info-box">
+                <p><strong>Arii acoperite:</strong> București și județele învecinate. Transport și montaj incluse.</p>
+              </div>
+            </div>
+
+            <form id="contact-form" class="card form">
+              <h2>Cerere ofertă</h2>
+              <div class="form-row">
+                <label for="nume">Nume</label>
+                <input id="nume" name="nume" type="text" required />
+              </div>
+              <div class="form-row">
+                <label for="telefon">Telefon</label>
+                <input id="telefon" name="telefon" type="tel" required />
+              </div>
+              <div class="form-row">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required />
+              </div>
+              <div class="form-row">
+                <label for="data">Data evenimentului</label>
+                <input id="data" name="data" type="date" />
+              </div>
+              <div class="form-row">
+                <label for="locatie">Locație</label>
+                <input id="locatie" name="locatie" type="text" placeholder="Oraș/Adresă" />
+              </div>
+              <div class="form-row">
+                <label for="pachet">Pachet</label>
+                <input id="pachet" name="pachet" type="text" placeholder="Basic / Classic / Premium" />
+              </div>
+              <div class="form-row">
+                <label for="mesaj">Detalii</label>
+                <textarea id="mesaj" name="mesaj" rows="4" placeholder="Număr aproximativ mese/scaune, decor, alte detalii"></textarea>
+              </div>
+              <div class="form-actions">
+                <button class="btn btn-primary" type="submit">Trimite pe email</button>
+                <button class="btn btn-ghost" type="button" id="copy-summary">Copiază sumar</button>
+              </div>
+              <p class="muted small">Nu salvăm date. Formularul deschide clientul tău de email cu un mesaj precompletat (mailto).</p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <strong>PartyRent By Jan</strong>
+          <p class="muted">Îți aducem petrecerea acasă.</p>
+        </div>
+        <div class="footer-cta">
+          <a class="btn btn-primary" href="tel:+407xxxxxxxx" id="footer-tel" aria-label="Sună PartyRent By Jan">Sună acum</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <small>© <span id="year"></span> PartyRent By Jan. Toate drepturile rezervate.</small>
+      </div>
+    </footer>
+
+    <script src="assets/main.js"></script>
+  </body>
+  </html>
