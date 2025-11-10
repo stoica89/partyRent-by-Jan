@@ -59,7 +59,7 @@ document.getElementById('year')?.append(new Date().getFullYear());
     const subject = encodeURIComponent('Cerere oferta — PartyRent By Jan');
     const body = encodeURIComponent(buildSummary(v));
     // TODO: set real email below
-    const email = document.getElementById('mail-link')?.getAttribute('href')?.replace('mailto:', '') || 'contact@partyrentbyjan.ro';
+    const email = document.getElementById('mail-link')?.getAttribute('href')?.replace('mailto:', '') || 'partyrentbyjan@gmail.com';
     window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
   });
 
@@ -81,7 +81,7 @@ document.getElementById('year')?.append(new Date().getFullYear());
 
 // Placeholders for phone/WhatsApp links: replace with real number
 (function () {
-  const tel = '+407xxxxxxxx'; // TODO: înlocuiește cu număr real
+  const tel = '+40726684005'; // TODO: înlocuiește cu număr real
   const telLink = document.getElementById('tel-link');
   const waLink = document.getElementById('wa-link');
   const footerTel = document.getElementById('footer-tel');
